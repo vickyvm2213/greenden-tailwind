@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greenden</title>
-    <!-- Tailwind CSS CDN LINK  -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Tailwind CSS v3 Script -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
 <body>
     <!-- Responsive Navbar -->
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10 ">
         <h1 class="text-2xl">Greenden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="30px" stroke-width="1.5"
-            stroke="currentColor" class="size-6  md:hidden ">
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="30px"
+            stroke-width="1.5" stroke="currentColor" class="size-6  md:hidden ">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
 
@@ -32,59 +32,85 @@
 
     </nav>
 
-    <!-- Product Section -->
-    <section class="">
-        <div>
-            <h1 class="text-4xl font-bold mb-5 text-center mt-10">Our Products</h1>
-            <input type="text"  class="border border-black p-2 mr-0 m-3 " p style="width: 80%; margin-left: 140px;  " placeholder="Search for products...">
+    <!-- side navbar -->
+    <section id="sidnav" class="bg-green-100 fixed z-20 top-0  transition-all duration-1000   "
+        style="width: 50%; height:100vh; right: -50%;">
+        <div class="text-right p-5">
+            <p id="closenav" class="inline cursor-pointer">X</p>
         </div>
+
+        <ul class="flex flex-col gap-10 items-center text-gray-600  ">
+            <li>
+                <a class="hover:underline hover:text-black" href="./index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="./product.html">Products</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="./contact.html">Contact</a>
+            </li>
+        </ul>
 
     </section>
 
-    <section class="p-5">
-        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 text-center">
+    <!-- Product Section -->
+    <section class="text-center p-5">
+        <h1 class="text-4xl font-bold mb-5 text-center mt-10">Our Products</h1>
+        <input id="search" type="text" class="border border-black p-2 mr-0 m-3 " p style="width: 80%;"
+            placeholder="Search for products...">
+
+
+        <div id="product-container" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 text-center">
             <div>
-                <img src="./images/best-seller5.png" alt="" class="inline hover:shadow-xl translate hover:-translate-y-2">
-                <p>Rose Plant</p>
+                <img src="./images/best-seller5.png" alt=""
+                    class="inline hover:shadow-xl translate hover:-translate-y-2">
+                <h1>Rose Plant</h1>
                 <p>$20</p>
             </div>
 
             <div>
-                <img src="./images/best-seller6.png" alt="" class="inline hover:shadow-xl translate hover:-translate-y-2">
-                <p>Lily Plant</p>
+                <img src="./images/best-seller6.png" alt=""
+                    class="inline hover:shadow-xl translate hover:-translate-y-2">
+                <h1>Lily Plant</h1>
                 <p>$20</p>
             </div>
             <div>
-                <img src="./images/best-seller7 (1).png" alt="" class="inline hover:shadow-xl translate hover:-translate-y-2">
-                <p>Marigold Plant</p>
+                <img src="./images/best-seller7 (1).png" alt=""
+                    class="inline hover:shadow-xl translate hover:-translate-y-2">
+                <h1>Marigold Plant</h1>
                 <p>$20</p>
             </div>
             <div>
-                <img src="./images/best-seller8.png" alt="" class="inline hover:shadow-xl translate hover:-translate-y-2">
-                <p>Gerbera Plant</p>
-                <p>$20</p>
-            </div>
-            <div>                                               
-                <img src="./images/bestseller_1.jpg" alt="" class="inline hover:shadow-xl translate hover:-translate-y-2">
-                <p>Rose Plant</p>
+                <img src="./images/best-seller8.png" alt=""
+                    class="inline hover:shadow-xl translate hover:-translate-y-2">
+                <h1>Gerbera Plant</h1>
                 <p>$20</p>
             </div>
             <div>
-                <img src="./images/bestseller_2.png" alt="" class="inline hover:shadow-xl translate hover:-translate-y-2">
-                <p>Lily plant</p>
+                <img src="./images/bestseller_1.jpg" alt=""
+                    class="inline hover:shadow-xl translate hover:-translate-y-2">
+                <h1>Rose Plant</h1>
                 <p>$20</p>
             </div>
             <div>
-                <img src="./images/bestseller_3.png" alt="" class="inline hover:shadow-xl translate hover:-translate-y-2">
-                <p>Marigold Plant</p>
+                <img src="./images/bestseller_2.png" alt=""
+                    class="inline hover:shadow-xl translate hover:-translate-y-2">
+                <h1>Lily plant</h1>
                 <p>$20</p>
             </div>
             <div>
-                <img src="./images/bestseller_4.png" alt="" class="inline hover:shadow-xl translate hover:-translate-y-2">
-                <p>Gerbera Plant</p>
+                <img src="./images/bestseller_3.png" alt=""
+                    class="inline hover:shadow-xl translate hover:-translate-y-2">
+                <h1>Marigold Plant</h1>
                 <p>$20</p>
             </div>
-            
+            <div>
+                <img src="./images/bestseller_4.png" alt=""
+                    class="inline hover:shadow-xl translate hover:-translate-y-2">
+                <h1>Gerbera Plant</h1>
+                <p>$20</p>
+            </div>
+
         </div>
     </section>
 
@@ -99,6 +125,7 @@
         <p>@ 2024 Greenden.</p>
     </section>
 
+    <script src="/product.js"></script>
 
 
 
